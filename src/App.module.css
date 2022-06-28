@@ -1,0 +1,31 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* html {
+  filter: invert(1) hue-rotate(180deg);
+} */
+/* img {
+  filter: invert(1) hue-rotate(180deg);
+} */
+
+.searchBox {
+  background-color: rgba(255, 127, 80, 0.425);
+  padding: 5px;
+  margin: 5px 0 0 5px;
+  border: 1px solid black;
+  outline: none;
+}
+.container {
+  margin: 10px;
+}
+.data {
+  background-color: #e5e5e5;
+  border: 1px solid black;
+  margin: 10px;
+  padding: 5px;
+}
+.container ul {
+  list-style-type: none;
+}

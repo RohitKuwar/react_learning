@@ -11,3 +11,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+button {
+  cursor: pointer;
+}
+.todoContainer {
+  padding: 5px;
+}
+.todos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 600px;
+  border: 1px solid black;
+}
+.todos h2, i {
+  padding: 2px;
+  cursor: pointer;
+}
+.on {
+  color: goldenrod;
+}
+.off {
+  color: black;
+}
