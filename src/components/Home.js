@@ -1,7 +1,9 @@
-import React, { createContext } from "react";
+import React, { createContext, lazy, Suspense } from "react";
 import useFetch from '../customHooks/useFetch'
-import CompA from './useContext/CompA'
+// import CompA from './useContext/CompA'
 import TodoAppRedux from './TodoAppRedux'
+
+const CompA = lazy(() => import('./useContext/CompA'))
 
 const MyContext = createContext()
 function Home() {
@@ -13,9 +15,11 @@ function Home() {
   return (
     <div>
       <h1>Home</h1>
-      <MyContext.Provider value={"from Home via CompA with useContext"}>
-        <CompA />
-      </MyContext.Provider>
+      <Suspense fallback={<div>loading...</div>}>
+        <MyContext.Provider value={"from Home via CompA with useContext"}>
+          <CompA />
+        </MyContext.Provider>
+      </Suspense>
       {loading && <div>Loading...</div>}
       {data && (
         <div>
