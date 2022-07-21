@@ -1,7 +1,6 @@
 import React, { createContext } from "react";
 import useFetch from '../customHooks/useFetch'
 import CompA from './useContext/CompA'
-import LoginForm from "./LoginForm";
 import TodoAppRedux from './TodoAppRedux'
 
 const MyContext = createContext()
@@ -14,7 +13,6 @@ function Home() {
   return (
     <div>
       <h1>Home</h1>
-      <LoginForm />
       <MyContext.Provider value={"from Home via CompA with useContext"}>
         <CompA />
       </MyContext.Provider>
