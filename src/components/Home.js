@@ -1,6 +1,5 @@
 import React, { createContext, lazy, Suspense } from "react";
 import useFetch from '../customHooks/useFetch'
-// import CompA from './useContext/CompA'
 import TodoAppRedux from './TodoAppRedux'
 
 const CompA = lazy(() => import('./useContext/CompA'))

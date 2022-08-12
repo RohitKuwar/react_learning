@@ -7,6 +7,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.1",
+    "env-cmd": "^10.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.8",
@@ -19,7 +20,13 @@
     "start": "set PORT=3500 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start:dev": "env-cmd -f ./environments/.env.dev react-scripts build",
+    "build:dev": "env-cmd -f ./environments/.env.dev npm run-script build",
+    "start:test": "env-cmd -f ./environments/.env.test react-scripts build",
+    "build:test": "env-cmd -f ./environments/.env.test npm run-script build",
+    "start:prod": "env-cmd -f ./environments/.env.prod react-scripts build",
+    "build:prod": "env-cmd -f ./environments/.env.prod npm run-script build"
   },
   "eslintConfig": {
     "extends": [
